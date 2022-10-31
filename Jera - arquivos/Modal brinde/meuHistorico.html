@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="meuHistorico_estilo.css">
+    <link rel="icon" type="image/x-icon" href="../imgs/favicon.svg">
+    <script src="../funções/Function.js"></script>
+    <title>Meu Histórico</title>
+</head>
+
+<body>
+
+    <body>
+        <iframe src="/Barra lateral atualizada_colab/index_colab.html"></iframe>
+        <div class="container">
+            <!-- mude o e coloque seu id -->
+            <div id="titulo_MeuHist">
+                <h1>Meu Histórico</h1>
+
+                <div id="pesquisar">
+                    <div id="pesq">
+                        <div>
+                            <button id="icon" href="#"><img src="/imgs/pesquisar.svg" alt=""></button>
+                        </div>
+                        <div>
+                            <input id="input-pesq" placeholder="Pesquisar" type="text" onkeyup="searchTableColumns()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- mude o e coloque seu id -->
+            <main id="main-MeuHistorico">
+                <div id="scroll-Meuhist">
+                    <!-- mude o e coloque seu id com nome de sua tabela-->
+                    <table id="tabela_MeuHistorico">
+                        <thead>
+                            <tr>
+                                <th class="col_Hist">Objeto</th>
+                                <th class="col_Hist_meio">Descrição</th>
+                                <th class="col_Hist">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="parentRow" onclick="showHideRow('linha1');">
+                                <td>Notebook</td>
+                                <td>Positivo - 2019 </td>
+                                <td><Strong><button class="btn_devolver_equipamento"
+                                            onclick="abrirAviso('.modal_aviso')">Devolver</button></Strong></button>
+                                </td>
+                            </tr>
+                            <tr style="display: none;" class="subRow" id="linha1">
+                                <td colspan="3">
+                                    <div class="container_pai">
+
+                                        <div class="container_dados">
+                                            <span>•</span><strong>Data de devolução:</strong>
+                                            <p>22/01/2022</p>
+                                        </div>
+                                        <div class="container_dados">
+                                            <span>•</span><strong>Descrição:</strong>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, assumenda.
+                                                Suscipit maxime aliquid magnam aperiam! </p>
+                                        </div>
+
+                                    </div>
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- mude o e coloque seu id com nome da sua tela -->
+                <div class="modal_aviso" id="aviso">
+                    <div class="modal_content_aviso">
+
+                        <!-- cabeça do aviso -->
+                        <div class="head_modal_aviso">
+                            <h1 class="tit_modal">Criar Brinde</h1>
+                            <span>Adcionar um novo brinde a lista</span>
+                        </div>
+
+                        <!-- corpo do aviso -->
+
+                        <form class="body_modal_aviso">
+                            <div class="form-input-div-mae">
+                                <div class="form-input">
+                                    <input class="input_qtd" type="number" id="qtd" name="qtd" placeholder="Quantidade:"
+                                        autocomplete="off">
+                                </div>
+                                <div class="form-input">
+
+                                    <input class="input_qtd" list="browsers" name="browser" id="browser"
+                                        placeholder="Objeto:">
+                                    <datalist id="browsers">
+                                        <option value="Edge">
+                                        <option value="Firefox">
+                                        <option value="Chrome">
+                                        <option value="Opera">
+                                        <option value="Safari">
+                                    </datalist>
+                                </div>
+                                <div class="descricao-K">
+                                    <fieldset>
+                                        <legend>Descrição</legend>
+                                        <textarea name="" id="" cols="40" rows="5" style="resize: none;"></textarea>
+                                    </fieldset>
+
+                                </div>
+
+                                <!-- rodape do aviso/botoes -->
+                                <div class="footer_modal_aviso">
+                                    <div id="cancelar_btn">
+                                        <button class="btn" id="btn_cancelarColab"
+                                            onclick="closeaviso('.modal_aviso')">Cancelar</button>
+                                    </div>
+
+                                    <div id="salvar_btn">
+                                        <button type="submit" class="btn" id="btn_salvarColab"
+                                            onclick="abrirConfirma('.modal_confirma')">Enviar</button>
+                                    </div>
+                                </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </main>
+            <div id="botao_MeuHist">
+
+            </div>
+            <div id="pe_MeuHist">
+                <footer id="pe">
+                    <p id="ano-designedBy"> 2022 | Designed By&nbsp;</p>
+                    <a href="#" class="fabricaSoftware">Fábrica de Software T.57&#160;</a>
+                    <a href="https://www.ms.senac.br/" target="_blank" class="fabricaSoftware">Senac MS</a>
+                </footer>
+            </div>
+        </div>
+    </body>
+
+</html>

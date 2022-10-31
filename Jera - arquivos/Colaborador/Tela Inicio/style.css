@@ -1,0 +1,368 @@
+:root{
+    --verde: #0DB551;
+    --verde-florescente: #12FF72;
+    --roxo: #7C12CD;
+    --roxo-claro: #DABDF0;
+    --preto: #111;
+    --branco: #FCFCFC;
+    --cinza: #E7E7E7;
+    --cinza-inativo: #C4C4C4;
+    --cinza-input: #f0f0f0;
+    --font-paragrafo: 'Nunito', sans-serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    color: #111;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    all: unset;
+    display: flex;
+    background-color: #FCFCFC;
+}
+
+iframe{
+    height: auto;
+    width: 15.6rem;
+    border: none;
+}
+
+.content{
+    all: unset;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:"titulo"
+                        "carrossel"
+                        "footer";
+    grid-template-rows: 22% 75% 3%;
+    grid-template-columns: 100%;
+}
+
+header{
+    grid-area: titulo;
+    display: flex;
+}
+
+.container-content{
+    grid-area: carrossel;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 2rem 0 2rem;
+}
+
+footer{
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
+}
+
+.container-welcome{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 2rem;
+    bottom: 0;
+}
+
+.welcome-userName{
+    display: flex;
+    flex-direction: row;
+}
+
+#welcome{
+    font-size: 2.5rem;
+}
+
+#userName{
+    font-size: 2.5rem;
+}
+
+.interrogacao{
+    margin-top: 8px;
+}
+
+#interrogacao{
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.barrasVerde{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+}
+
+.barra1{
+    background-color: var(--verde);
+    width: 124px;
+    height: 4px;
+    border-radius: 2px;
+}
+
+.barra2{
+    background-color: var(--verde);
+    width: 16px;
+    height: 4px;
+    border-radius: 2px;
+    margin-left: 8px;
+}
+
+.barra3{
+    background-color: var(--verde);
+    width: 8px;
+    height: 4px;
+    border-radius: 2px;
+    margin-left: 3px;
+}
+
+
+#ult-not{
+    font-size: 22px;
+}
+
+.filtro{
+    display: flex;
+    margin-top: 5px;
+}
+
+#mostrar-somente{
+    font-size: 16px;
+    font-weight: lighter;
+}
+
+.filtro ul{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10px;
+}
+
+.filtro li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.filtro a{
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 5px;
+}
+
+.icons-filtro img{
+    width: 14px;
+    height: 14px;
+}
+
+#brindes, #pedidos{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+} 
+
+#brindes:hover, #pedidos:active{
+    color: var(--roxo);
+}
+
+#pedidos:hover, #pedidos:active{
+    color: var(--verde);
+}
+
+.carrossel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0 0 3rem 0;
+}
+
+.cardEquip, .cardBrinde{
+    width: 15rem;
+    height: 26rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 10px 10px 4px 10px;
+}
+
+.cardEquip{
+    border: 1px solid var(--verde);
+}
+
+.cardBrinde{
+    border: 1px solid var(--roxo);
+}
+
+.cardEquip:hover, .cardBrinde:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardEquip img{
+    width: 70px;
+    height: 70px;
+    border: 3px solid var(--verde);
+    border-radius: 50%;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+.brindeCard{
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    background-color: var(--cinza);
+    border: 3px solid var(--roxo);
+    border-radius: 50%;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+#userName-card, #estoqueBaixo{
+    font-size: 1.5rem;
+}
+
+#userLevel, #nomeBrinde{
+    font-size: 1rem;
+    border-bottom: 2px solid var(--preto);
+    font-family: var(--font-paragrafo);
+}
+
+#fezPedido{
+    font-size: 1rem;
+    font-family: var(--font-paragrafo);
+}
+
+#nomeEquip, #mensagemEstoque{
+    font-size: 1.1rem;
+    margin: 10px 0px;
+}
+
+#mensagemColab{
+    min-height: 4.5rem;
+    max-height: 7rem;
+    font-size: 0.9rem;
+    word-wrap: break-word;
+    border: 1px solid var(--verde);
+    border-radius: 2px;
+    text-align: justify;
+    padding: 5px;
+    font-family: var(--font-paragrafo);
+}
+
+.equip-visualizarNot, .brinde-visualizarNot{
+    width: 6.5rem;
+    height: 1.7rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    outline: none;
+    border-radius: 40px;
+    background-color: transparent;
+    cursor: pointer;
+    align-self: center;
+    margin: 18px 0px;
+    box-shadow: 0 0 0.4rem 0 0;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.equip-visualizarNot:hover, .brinde-visualizarNot:hover{
+    letter-spacing: 0.8px;
+}
+
+.equip-visualizarNot:active, .brinde-visualizarNot:active{
+    transform: translateY(0.3rem);
+    box-shadow: 0 0 0.2rem 0 0;
+}
+
+.equip-visualizarNot{
+    color: var(--verde);
+    border: 2px solid var(--verde);
+}
+
+.brinde-visualizarNot{
+    color: var(--roxo);
+    border: 2px solid var(--roxo);
+}
+
+#qntBrinde{
+    font-size: 1.8rem;
+    color: var(--roxo);
+    font-weight: bold;
+    height: 5.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-family: var(--font-paragrafo);
+}
+
+.data-hora-pedido{
+    bottom: 0;
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dataPedido{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+#ano-designedBy{
+    text-decoration: none;
+    font-size: 12px;
+    color: #9E9E9E;
+    font-family: var(--font-paragrafo);
+}
+
+#fabricaSoftware{
+    text-decoration: none;
+    color: #9E9E9E;
+    font-family: var(--font-paragrafo);
+}
+#fabricaSoftware:hover{
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.swiper{
+    width: 1200px;
+}
+
+.swiper-pagination{
+    position: absolute;
+}
+
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: var(--verde);
+    opacity: 0.7;
+}
+
+.swiper-pagination .swiper-pagination-bullet-active{
+    background: var(--verde); 
+}
+@media only screen and (max-width: 1550px) {
+    .cardEquip, .cardBrinde{
+        margin-left: 20%;
+    }
+    body{
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,134 @@
+:root{
+    --text: #fcfcfcb9;
+    --highlight-text: rgb(0, 140, 255);
+    --card-login:  #020202;
+    --background: rgba(17, 17, 17, 0.950);
+    --button-cor: rgb(41, 124, 41);
+    --button-hover:#0DB551;
+    --text-font: Nunito;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('../../imgs/background-texture.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    background-color: #020202d0;
+}
+
+        /* Estrutura e logomarca jera */
+.container-login{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+        /*card LOGIN*/
+.wrap-login{
+    width: 440px;
+    height: 440px;
+    border-radius: 20px;
+    display: flex;
+    box-shadow: 1px 2px 4px #0db551;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--card-login);
+}
+
+.login-form-title .logo{
+    height: 4rem;
+    margin: auto;
+}
+
+.login-form-title{
+    margin-top: 20px;
+}
+
+.tela-login input, button{
+    outline: none;
+    border: none;
+}
+
+        /* restaurarSenha */
+
+.container-texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container-texto label{
+    font-size: 14px;
+    color: var(--text);
+}
+
+/* .form_de_restaurarSenha{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.forms{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding-bottom: 20px;
+}
+.email_login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.email_login input{
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    font-family: var(--text-font);
+    font-size: 15px;
+    padding-left: 1em;
+}  
+        
+        /* BOTÃO VERDE*/
+
+.btn_restaurar_senha{
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: var(--button-cor);
+    color: var(--text);
+    font-size: large;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn_restaurar_senha:hover{
+    background-color: #0DB551;
+}
+

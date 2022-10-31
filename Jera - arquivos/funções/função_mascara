@@ -1,0 +1,7 @@
+<html>
+    <script src="mascara.js"></script>
+    <input onkeypress="return mask(event, this, '(##) ####-####')" maxlength="14" placeholder=" (DDD) 0000-0000">
+    <input onkeypress="return mask(event, this, '##/##/####')" maxlength="10" placeholder="dd/mm/aaaa">
+    <input onkeypress="return mask(event, this, '###.###.###-##')" maxlength="14" placeholder="000.000.000-00">
+    <input onkeypress="return mask(event, this, '##:##')" maxlength="5" >
+</html>

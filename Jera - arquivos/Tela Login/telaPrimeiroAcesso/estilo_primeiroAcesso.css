@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@200&display=swap');
+:root{
+    --text: #fcfcfcb9;
+    --highlight-text: rgb(0, 140, 255);
+    --card-login:  #2b2a2a;
+    --background: rgba(17, 17, 17, 0.950);
+    --button-cor: rgb(41, 124, 41);
+    --button-hover:#0DB551;
+    --text-font: Nunito;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+        /* Estrutura e logomarca jera */
+.container-login{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+}
+
+        /*card LOGIN*/
+.wrap-login{
+    width: 440px;
+    height: 440px;
+    display: grid;
+    grid-template-areas: "logo" "texto" "input";
+    grid-template-rows: 25% 10% 45%;
+    grid-template-columns: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 4px #0DB551; /* efeito de sombra card LOGIN */
+}
+.login-form-title{
+    display: flex;
+    grid-area: logo;
+    margin-top: 40px;
+}
+.login-form-title .logo{
+    height: 4rem;
+    margin: auto;
+}
+.tela-login input, button{
+    outline: none;
+    border: none;
+}
+
+        /* primeiro acesso - cadastre sua nova senha */
+.container-texto{
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    height: 40px;
+    list-style-type: none;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container-texto label{
+    font-size: 14px;
+    color: var(--text);
+}
+
+.form_de_primeiroAcesso{
+    grid-area: input;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.forms{
+    width: 440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem
+}
+
+.input_senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.input_senha input{
+    width: 350px;
+    height: 35px;
+    border-radius: 10px;
+    font-family: var(--text-font);
+    font-size: 15px;
+    padding-left: 1em;
+}  
+        
+        /* BOTÃO VERDE*/
+.btn_primeiro_acesso {
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 13.5rem;
+    border-radius: 30px;
+    background-color: var(--button-cor);
+    color: var(--text);
+    font-size: large;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn_primeiro_acesso:hover{
+    background-color: #0DB551;
+}

@@ -1,0 +1,128 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Nunito', sans-serif;
+    color: #fcfcfc;
+}
+
+.sidebar{
+    width: 15.6rem;
+    height: 100vh;
+    float: left;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    background: linear-gradient(269.92deg, #12FF72 -93.1%, #075B29 119.1%);
+    filter: drop-shadow(0px 5px 9px rgba(0, 0, 0, 0.161));
+}
+
+.logoJera{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.navigation{
+    height: 84%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.contain-perfil-menu{
+    height: 74%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.perfil{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.user-sino{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+}
+
+.user-sino a{
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#iconSino{
+    width: 18px;
+}
+
+.nivel-engrenagem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    font-size: 16px;
+}
+
+.menu ul{
+    list-style: none;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li{
+    border-left: 3px solid transparent;
+    padding: 4px;
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu li:hover{
+    border-left-color: #12FF72;
+    transition: 0.2s;
+}
+
+.menu li:active{
+    border-left: 3px;
+    border-left-color: #12FF72;
+}
+
+.menu a{
+    text-decoration: none;
+}
+
+.menu-a img{
+    width: 32px;
+}
+
+.menu-a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 8px;
+}
+
+.submenu a{
+    font-size: 16px;
+    margin-left: 3rem;
+}
+
+.logout a{
+    text-decoration: none;
+    margin-left: 4px;
+}

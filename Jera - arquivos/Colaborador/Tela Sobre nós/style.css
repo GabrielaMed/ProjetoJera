@@ -1,0 +1,164 @@
+:root{
+    --roxo: #7C12CD;
+    --verde: #0DB551;
+    --preto: #111;
+    --font-titulo-sub: 'Montserrat', sans-serif;
+    --font-paragrafo: 'Nunito', sans-serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    display: grid;
+    grid-template-areas: 
+    "sidebar header"
+    "sidebar conteudo"
+    "sidebar footer";
+
+    grid-template-columns: max-content;
+    grid-template-rows: 8rem 1fr 1.5rem;
+}
+
+iframe{
+    height: 100vh;
+    width: 15.6rem;
+    border: none;
+    grid-area: sidebar;
+}
+
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: var(--font-titulo-sub);
+    font-size: 40px;
+    color: var(--preto);
+}
+
+.main-content{
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3rem;
+}
+
+.logo-sobreNos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo-fabrica{
+    width: 300px;
+    margin-right: 1.5rem;
+}
+
+.paragrafo{
+    width: 60vw;
+    height: fit-content;
+    text-align: justify;
+}
+
+p{
+    font-family: var(--font-paragrafo);
+    font-size: 20px;
+    text-align: center;
+    color: var(--preto);
+}
+
+.container-nos{
+    margin: 2.5rem 2rem 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.nossasFotos{
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.nossasFotos img{
+    width: 150px;
+    height: 210px;
+    border: 2px solid #0DB551;
+    border-radius: 5px;
+}
+
+.nossasFotos #imgHover{
+    display: none;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    margin-right: 3rem;
+}
+
+.card-content .media-icons{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10px;
+    right: 20px;
+}
+
+.card-content .media-icons i{
+    color: var(--preto);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.card-content .media-icons i:hover{
+    color: var(--roxo);
+}
+
+.card-content:hover img{
+    display: none;
+    transition: ease-out;
+}
+
+.card-content:hover #imgHover{
+    display: flex;
+    transition: ease-in;
+}
+
+footer{
+    height: 1.5rem;
+    font-size: 0.7rem;
+    color: #9E9E9E;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    grid-area: footer;
+}
+
+#ano-designedBy{
+    text-decoration: none;
+    font-size: 12px;
+    color: #9E9E9E;
+    font-family: var(--font-paragrafo);
+}
+
+#fabricaSoftware{
+    text-decoration: none;
+    color: #9E9E9E;
+    font-family: var(--font-paragrafo);
+}
+
+#fabricaSoftware:hover{
+    color: var(--verde);
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurar Senha</title>
+    <link rel="stylesheet" href="estilo_restaurarSenha.css">
+    <link rel="shortcut icon" href="../../imgs/favicon.svg" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body class="tela-login">
+    <div class="container">
+        <div class="container-login">
+            <div class="wrap-login">
+                <div class="login-form-title">
+                    <img src="../../imgs/logo_Jera.svg" class="logo">
+                </div>
+
+                <div class="container-texto">
+                    <li><label>
+                        Para continuar, insira seu e-mail cadastrado.
+                    </label></li>
+                </div>
+
+                <div class="form_de_restaurarSenha">
+                    <form action="../../bd/sendEmailEsqueciSenha.php" method="post" class="forms">
+                        <div class="email_login">
+                            <input type="email" name="email" placeholder="E-mail" required="required">
+                        </div>
+                            <button type="submit" class="btn_restaurar_senha">Confirmar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>   
+</body>
+
+</html>

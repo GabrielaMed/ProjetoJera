@@ -1,0 +1,377 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+    color: #111;
+}
+:root{
+    --cor-titulo: rgb(0, 0, 0);
+    --cor-btn-cancelar: rgb(156, 77, 217);
+    --cor-btn-salvar: rgb(13, 181, 81);
+    --cor-background-input: rgb(134, 134, 134);
+    --cor-input-hover: rgb(156, 77, 217);
+    --branco: #FCFCFC;
+}
+
+body{
+    display: flex;
+}
+
+iframe{
+    height: auto;
+    width: 15.6rem;
+    border: none;
+}
+
+.container-content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    grid-template-areas:"titulo"
+                        "conteudo"
+                        "footer";
+    grid-template-rows: 20% 77% 3%;
+    grid-template-columns: 100%;
+}
+
+.content{
+    flex: 2;
+    grid-area: conteudo;
+}
+
+/* COLA SEU CSS AQUI */
+#titulo_config{
+    color: var(--cor-titulo);
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    grid-area: titulo;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#formulario-confgUsuario{
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+#corpo_config_usuario{
+    width: 100%;
+    height: 100%;
+}
+
+
+.internal-autofill-selected{
+    background-color: transparent !important;
+}
+
+#form{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.container-foto{
+    height: 180px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    
+}
+.container-foto .foto{
+    width: 180px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #F0F0F0;
+    border: 5px solid #F0F0F0;
+}
+
+#camera{
+    width: 40px;
+    height: 40px;    
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 0px;
+    margin-left: 20%;
+}
+
+#camerazinha{
+    width: 30px;
+    height: 30px;  
+    padding-top: 3px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+#arquivo{
+    display: none;
+}
+
+
+
+#icons_form{
+    width: 20px;
+}
+
+.btns_cancel_salvar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn_cancelar{
+    border: 2px solid var(--cor-btn-cancelar);
+    border-radius: 30px;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-paragrafo);
+    font-size: 20px;
+    cursor: pointer;
+    transition: all .4s ease-in;
+    text-decoration: none;
+    color: var(--cor-btn-cancelar);
+    box-sizing: border-box;
+}
+
+.btn_cancelar:hover{
+    background-color: var(--cor-btn-cancelar);
+    color: #ffffff;
+}
+
+.btn_salvar{
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid var(--cor-btn-salvar);
+    border-radius: 40px;
+    color: var(--cor-btn-salvar);
+    background-color: transparent;
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+    transition: all .4s ease-in;
+    font-weight: bold;
+}
+
+.btn_salvar:hover{
+    background-color: var(--cor-btn-salvar);
+    color: #ffffff;
+}
+
+.campo{
+    background-color: #F0F0F0;
+    color: var(--cor-background-input);
+    margin-bottom: 12px;
+    display: flex;
+    height: 1.8rem;
+    width: 35.8rem;
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+}
+
+#icon{
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+#icon_email{
+    width: 1.9rem;
+    height: 1.7rem;
+}
+
+#icon_cadeado{
+    width: 1.95rem;
+    height: 1.85rem;
+}
+
+.icons{
+    padding-right: 0.5rem;
+}
+
+.input_campos{
+    font-size: 0.8rem;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    display: block;
+}
+
+.campo:nth-child(3):hover{
+    border: 1px solid var(--cor-input-hover);
+    transition: all .2s ease-in-out;
+}
+
+.input_campos:nth-child(1){
+    cursor: not-allowed !important;
+}
+
+#input_campos:hover{
+    border: 10px solid var(--cor-input-hover);
+}
+
+
+
+input[type="text"], input[type="tel"], input[type="email"], input[type="password"]{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+
+.campo_nova_senha{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nova_senha{
+    color: var(--cor-input-hover);
+    border: 1px solid var(--cor-btn-cancelar);
+    background-color: transparent;
+    height: 24px;
+    width: 100px;
+    cursor: pointer;
+    transition: all .4s ease-in;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.nova_senha:hover{
+    letter-spacing: 0.5px;
+}
+
+.modal-nova-senha{
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+  
+.modal-content-senha{
+    background-color: var(--branco);
+    width: 580px;
+    height: 18rem;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--cor-btn-salvar);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.head-modal-senha {
+    display: flex ;
+    justify-content: center ;
+}
+
+.title-modal-senha {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.body-modal-senha form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-paragrafo);
+    height: 220px;
+}
+
+.form-input {
+    background-color: #F0F0F0;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+    width: 31rem;
+    padding: 7px 8px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+    gap: 4px;
+}
+
+.material-symbols-outlined{
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-input:hover {
+    border: 1px solid #9C4DD9;
+}
+
+.input-senha {
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: var(--preto);
+    font-family: var(--font-paragrafo);
+    display: block;
+}
+
+.footer-modal-senha{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+  
+.footer-modal-senha button{
+    width: 150px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 40px;
+    font-family: var(--font-paragrafo);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer{
+    grid-area: footer;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #9E9E9E;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#ano-designedBy{
+    text-decoration: none;
+    font-size: 12px;
+    color: #9E9E9E;
+}
+
+#fabricaSoftware{
+    text-decoration: none;
+    color: #9E9E9E;
+}
+
+#fabricaSoftware:hover{
+    color: #0DB451;
+    font-weight: bold;
+}

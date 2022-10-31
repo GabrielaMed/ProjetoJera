@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiro Acesso</title>
+    <link rel="stylesheet" href="estilo_primeiroAcesso.css">
+    <link rel="shortcut icon" href="../../imgs/favicon.svg" type="image/x-icon">
+</head>
+    
+<body class="tela-login">
+    <div class="container">
+        <div class="container-login">
+            <div class="wrap-login">
+
+                <div class="login-form-title">
+                    <img src="../../imgs/logo_Jera.svg" alt="logo jera" class="logo">
+                </div>
+
+                <div class="container-texto">
+                    <li><label>
+                        Seja bem vindo(a) ao seu primeiro acesso.
+                    </label></li>
+                    <li><label>
+                        Cadastre sua nova senha.
+                    </label></li>
+                </div>
+
+                <div class="form_de_primeiroAcesso">
+                    <form action="../../bd/newPassword.php" method="post" class="forms">
+                        <div class="input_senha">
+                            <input type="password"placeholder="Senha" name="senha" required="required">
+                        </div>
+                        <div class="input_senha">
+                            <input type="password" placeholder="Confirmar Senha" name="conf_senha" required="required">
+                        </div>
+                            <button class="btn_primeiro_acesso" type="submit">Confirmar</button>
+                    </form>   
+                </div>
+                
+            </div>
+        </div>
+    </div>   
+</body>
+
+</html>

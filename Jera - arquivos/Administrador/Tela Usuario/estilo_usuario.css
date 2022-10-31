@@ -1,0 +1,1148 @@
+
+* {
+    padding: 0px ;
+    margin: 0px ;
+    font-family: 'Montserrat', sans-serif !important;
+    color: #111 ;
+}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Nunito:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+:root {
+    --verde: #0DB551;
+    --verde-florescente: #12FF72;
+    --roxo: #7C12CD;
+    --roxo-claro: #DABDF0;
+    --preto: #111;
+    --card-login: #707070;
+    --branco: #FCFCFC;
+    --cinza: #E7E7E7;
+    --cinza-inativo: #C4C4C4;
+    --cinza-input: #f0f0f0;
+    --font-titulo-sub: 'Montserrat', sans-serif;
+    --font-paragrafo: 'Nunito', sans-serif;
+}
+
+h1 {
+    font-size: 40px  !important;
+    margin: 0!important;
+    font-family: 'Montserrat', sans-serif !important ;
+    font-weight: bold !important;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: bold !important;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h5 {
+    font-family: 'nunito', sans-serif;
+}
+
+h6 {
+    font-family: 'nunito', sans-serif;
+}
+
+p {
+    all: unset;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    all: unset;
+    text-decoration: underline ;
+}
+
+a:hover {
+    color: var(--roxo);
+    cursor: pointer;
+}
+
+body {
+    /* overflow: hidden ; */
+    display: flex;
+    background-color: var(--branco);
+}
+
+iframe {
+    height: 100vh;
+    width: 15.6rem;
+    border: none;
+}
+
+
+
+.container-fluid {
+    all: unset;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: "titulo"
+        "tabela"
+        "btn"
+        "footer";
+    grid-template-rows:8% 81% 8% 3%;
+    grid-template-columns: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* responsividade */
+
+
+
+/* TITULO DA TELA titulo */
+
+#tituloUsuario {
+    grid-area: titulo;
+    display: flex ;
+    justify-content: center ;
+    align-items: flex-end !important ;
+    margin-top: 0.5% ;
+
+}
+
+
+
+/*pesquisar*/
+#pesquisar {
+    position: absolute !important;
+    height: 50px !important;    
+    display: flex !important;
+    justify-content: flex-end !important;
+    margin: 50px 10px 0px 60%;
+    align-items: end !important;
+    background-color: var(--branco);    
+    
+
+}
+
+#icon {
+    
+    transform: scale(0.8) translatey(0px) !important;
+    margin-bottom: 0 !important;
+    align-items: center !important;
+    border: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background-color: var(--branco);
+    
+}
+.icon{
+    width: 28px !important;
+    height: 32px !important;
+}
+
+#input-pesq{
+    
+    margin-left: 10px !important;
+    border: none !important;
+    font-size: 18px !important;
+    font-family: var(--font-paragrafo) !important;
+    bottom: 0px !important;
+    outline: none !important;    
+    background-color: var(--branco) !important;
+    color: var(--preto)  ;
+    
+}
+
+#pesq {
+    border-bottom: var(--cinza) solid 2px;
+    width: 257px;
+    height: 34px;
+    flex-direction: row;
+    display: flex !important;
+    align-items: center !important;
+    transition: all .4s ease-in-out;
+
+}
+
+
+#input-pesq::placeholder{
+    font-size: 18px !important; 
+}
+
+/* MAIN */
+
+#main-usuario {
+    grid-area: tabela;
+    padding-top: 4%;
+}
+
+
+
+/*||||||>>>>>>>>> BARRA DE ROLAGEM DA TABELA | Scroll  <<<<<<<<<<<<||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+
+.scroll-usuario {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 95%;
+    width: 95%;
+}
+
+.scroll-usuario::-webkit-scrollbar {
+    width: 10px;
+}
+
+.scroll-usuario::-webkit-scrollbar-track {
+    background-color: var(--cinza);
+    border-radius: 30px;
+    height: 100px;
+    border: 1px solid var(--verde);
+}
+
+.scroll-usuario::-webkit-scrollbar-thumb {
+    background-color: var(--verde);
+    border-radius: 30px;
+}
+
+
+
+/*||||||||||||||||>>>>>>>>>>>>>>>>>>>>>>> TABELA DE USUARIOS    <<<<<<<<<<<<<<<<<<<<<<<||||||||||||||||||||||||||||||||||||||||||||||||||||||||*/
+#tabela_usuario {
+    width: 95%;
+    padding-left: 7%;
+}
+
+table {
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: center;
+    font-size: 18px;
+
+}
+
+#tabela_usuario tr td {
+    padding: 20px;
+}
+
+
+
+thead {    
+    top: 0;
+    /* position: sticky; */
+    font-weight: lighter;
+    background-color: var(--branco);
+}
+
+.coluna_editar {
+    font-size: 32px;
+    background-color: var(--branco);
+    border-bottom: 2px solid var(--verde);
+    margin: 0;
+    font-weight: lighter;
+    align-items: start;
+    width: 5%;
+
+}
+
+.coluna_nome {
+    font-size: 32px;
+    background-color: var(--branco);
+    border-bottom: 2px solid var(--verde);
+    margin: 0;
+    font-weight: lighter;
+    width: auto;
+    /* position: static; */
+
+}
+
+.coluna_perfil {
+    width: 20%;
+    font-size: 32px;
+    background-color: var(--branco);
+    border-bottom: 2px solid var(--verde);
+    margin: 0;
+    font-weight: lighter;
+
+    cursor: pointer;
+}
+
+
+/* BOTAO EDITAR - FICA NO 1 TD E ESTILO UMA IMG DO LAPIS */
+
+.botao_editar {
+    all: unset ;
+    width: 100% ;
+    height: 100% ;
+    margin: 0 ;
+    padding: 0% ;
+    padding-right: 15px ;
+    background-color: var(--branco) ;
+    border: none ;
+    cursor: pointer ;
+}
+.botao_editar:focus {
+    /* display: none; */
+    outline: none;
+
+}
+
+img.img_editar {
+    border: none ;
+}
+#perfil{
+    display: flex;
+    background-color: var(--branco);
+    cursor: pointer;
+    outline: none !important;
+    border: none;
+    flex-direction: column;
+    text-decoration: underline;
+}
+#perfil:hover{
+    color: var(--roxo);
+}
+/* coluna dos botao ver historico e inativar */
+
+.titulo_tabela_icon{
+    width: 5%;
+    width: 5%;
+    text-align: center;
+    font-size: 32px;
+    font-weight: lighter;
+    border-bottom: 2px solid var(--verde);
+}
+.titulo_tabela_meio{
+    text-align: center;
+    font-size: 32px;
+    font-weight: lighter;
+    border-bottom: 2px solid var(--verde);
+    width: 75%;
+}
+.titulo_tabela_perfil{
+    width: 20%;
+    font-size: 32px;
+    font-weight: lighter;
+    border-bottom: 2px solid var(--verde);
+    text-align: center;
+}
+/* BOTAO DE INATIVAR USUARIO */
+p .inativar {
+    /* padding: 20px 0px ; */
+    margin-bottom: 16px ;
+    border: none ;
+    cursor: pointer ;
+    height: auto ;
+    text-align: left ;
+    background: none ;
+    font-size: 18px ;
+    text-decoration: underline ;
+    background-color: #E7E7E7 ; 
+}
+#div_nome_mae{
+    display: flex;
+    flex-direction: column;
+}
+#infos{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+span{
+    color: var(--roxo) !important;
+    font-family: var(--font-paragrafo) !important;
+    padding-right: 5px !important;
+}
+.div_nome{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.div_perfil {
+    display: flex;
+    flex-direction: column;
+}
+.container_info{
+    display: flex ;
+    flex-direction: column  ;    
+    justify-content: space-between;
+    padding-bottom: 16px;
+    align-items: flex-start;
+}
+#div_nome_mae{
+    display: flex;
+    align-items: start;
+    justify-content: start;
+}
+.container_mae{
+    display: flex;
+    padding: 5px;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* CAMPO DE EDIÇÃO DOS SOB INFORMAÇÕES OCULTAS EFEITOS HOOVER E BORDAS */
+
+/*linha expansiva*/
+.subRow td{
+    border: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+.subRow .contente-itens-kits{
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--font-paragrafo);
+}
+.subRow td p{
+    font-size: 18px;
+}
+.subRow td:hover{
+    border: 2px solid var(--roxo);
+}
+
+.parentRow td {
+    border-bottom: 2px solid var(--cinza);
+    cursor: pointer;
+}
+
+.parentRow:hover td {
+    border-bottom: 2px solid var(--roxo);
+}
+
+/* CAMPO BOTAO NOVO /botao */
+
+#botaoUsuario {
+    grid-area: btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn_usuario_novo {
+    width: 150px;
+    height: 40px;
+    color: var(--verde);
+    font-family: var(--font-paragrafo);
+    background-color: var(--branco);
+    border: 2px solid var(--verde);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+#btn_usuario_novo:hover {
+    cursor: pointer;
+    color: var(--branco);
+    background-color: var(--verde);
+    transition: all .4s ease-in;
+}
+
+#btn_usuario_novo:focus {
+    outline: none;
+
+    /* display: none; */
+}
+
+
+/*||||||||||||||||||||||||||||||||||>>>>>>>>>>>>>>>>>>> CAMPO DOS MODAIS <<<<<<<<|||||||||||||||||||||||||||||||||||||||||||||| */
+
+/* ESTILIZAÇÃO DOS MODELOS DE BOTAO DO MODAL  */
+.btn_cancelar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 147.6px;
+    height: 36.8px;
+    color: var(--roxo);
+    font-family: var(--font-paragrafo);
+    background-color: var(--branco);
+    border: 2px solid var(--roxo);
+    border-radius: 30px;
+    font-size: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all .4s ease-in;
+    font-weight: bold;
+}
+
+
+/* hover dos botoes */
+.btn_cancelar:hover {
+    color: var(--branco);
+    text-decoration: none !important;
+    background-color: var(--roxo);
+}
+.btn_confirmar {
+    all: unset;
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    font-family: var(--font-paragrafo);
+    background-color: var(--branco);
+    border: 2px solid var(--verde);
+    color: var(--verde);
+    
+}
+
+.btn_confirmar:hover {
+    color: var(--branco);
+    background-color: var(--verde);
+    text-align: center
+}
+/* para remover a borda preta ao clicar */
+.btn_cancelar:focus {
+    outline: none;
+    
+    /* display: none; */
+    
+}
+.btn_confirmar:focus {
+    /* display: none; */
+    outline: none;
+
+}
+
+.editar_main {
+    display: grid;
+    background-color: #FCFCFC;
+    width: 580px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    border: 2px solid var(--verde);
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+.editar_main_head {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-titulo-sub);
+    font-weight: bold;
+    padding: 20px;
+    padding-bottom: 0px;
+    /* border-radius: 10px; */
+    /* all: unset; */
+
+    /* background-color: #9C4DD9; */
+}
+
+
+.editar_main_body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* padding: 20px; */
+    width: 31rem;
+}
+
+/* corpo do modal editar */
+.main_body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: var(--font-paragrafo);
+    margin-top:8px ;
+
+}
+
+/* campo do formulario de editar */
+
+.editar_form-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F0F0F0;
+    margin-bottom: 12px;
+    height: 2.5rem;
+    width: 31rem;
+    padding: 8px ;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+    gap: 4px;
+}
+
+.editar_form-input:hover {
+    border: 1px solid #9C4DD9;
+}
+
+.editar_form_icons {
+    width: 24px;
+    height: 24px;
+    color: currentColor;
+
+    /* background-color: aqua; */
+}
+
+/* campo do input do form */
+.editar_input-newUser {
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: var(--preto);
+    font-family: var(--font-paragrafo);
+    display: block;
+
+    /* font-weight: bold; */
+}
+
+
+/* campo do dropdown  opçoes de perfil de administrador */
+.editar_dropdown {
+    height: 1.5rem ;
+
+}
+
+.editar_nivelUsuario {
+    width: 28rem ;
+    height: 28px ;
+    font-family: var(--font-paragrafo);
+    font-size: 15px ;
+    color: var(--preto) ;
+    opacity: 0.6 ;
+    padding: 0 ;
+    border: none ;
+    background-color: transparent ;
+    text-align: left ;
+    box-shadow: none ;
+    outline: none ;
+
+}
+
+.editar_nivelUsuario::after {
+    float: right ;
+    margin-right: 8px ;
+    margin-top: 6px ;
+    color: var(--preto) ;
+
+}
+
+.nome_equipamento{
+    display: flex;
+    flex-direction: row;
+}
+.editar_dropdown-menu {
+    padding: 0px ;
+    width: 100% ;
+    height: 95px ;
+    border-radius: 8px ;
+}
+
+.editar_dropdown-item {
+    text-decoration: none ;
+    font-size: 14px ;
+    color: var(--preto) ;
+    opacity: 0.8 ;
+    border: 1px solid transparent ;
+}
+
+li .editar_dropdown-item:hover {
+    width: 89% ;
+    background-color: var(--roxo-claro) ;
+    border: 1px solid var(--roxo) ;
+}
+
+.editar_dropdown-menu a:active {
+    color: var(--preto) ;
+    opacity: 0.8 ;
+}
+
+.editar_dropdown:hover :nth-child(1) {
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px ;
+}
+
+.editar_dropdown:hover :nth-child(3) {
+    border-bottom-left-radius: 8px ;
+    border-bottom-right-radius: 8px ;
+}
+
+.reset {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    font-weight: bold;
+    text-align: start;
+    font-size: 14px;
+    
+    /* padding: 5px; */
+    text-align: right;
+}
+
+
+
+#redefinir_senha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;   
+    padding-right: 10px !important;
+}
+
+/* #redefinir_senha:checked {
+    box-shadow: 0px 0px 1px var(--preto);
+} */
+.redefinir_senha{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0 !important;
+    margin-right: 5px !important;
+    
+    
+}
+
+/* aviso de senha padrão */
+
+#editar_aviso_p {
+    padding: 8px;
+    text-align: justify;
+}
+
+/* rodape do modal  - <botoes>  */
+.editar_main_footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 18px;
+
+}
+.editar_main_footer>a {
+    text-decoration: none;
+}
+
+
+/*|||||||||||| MODAL DE AVISO: DESEJA INATIVAR O USUARIO |||||||| */
+/* abertura do modal e fundo preto */
+.modal_inativar {
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* corpo do modal e fundo branco */
+.modal_confirma_aviso {
+    background-color: #FCFCFC;
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 5px;
+    border: 2px solid var(--verde);
+    padding: 5px;
+    display: block;
+   
+}
+
+/* titulo do aviso no modal */
+
+.head_modal_confirma {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.tit_modal_conf {
+    font-size: 29px ;
+    padding-top: 5px;
+    padding: 5px;
+}
+
+
+.footer_modal_confirma {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: end;
+    padding: 2rem;
+    padding: 20px;
+}
+
+/*|||||||||||| MODAL DE AVISO: USUARIO INATIVADO / OK  |||||||| */
+/* abertura do modal e fundo preto */
+
+.modal_aviso_ok {
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+
+}
+
+/* corpo do modal e fundo branco */
+.aviso_ok {
+    background-color: #FCFCFC;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    border: 2px solid var(--verde);
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    /* display: grid; */
+}
+
+/* titulo do aviso no modal */
+.ok_cabecario h1 {
+    padding: 20px;
+    font-size: 29px ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.ok_corpo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* botao ok / estilo dif */
+.botao_ok {
+    /* all: unset; */
+    width: 150px;
+    height: 40px;
+    color: var(--branco);
+    font-family: var(--font-paragrafo);
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    background-color: var(--verde);
+    border: 2px solid var(--verde);
+    outline: none !important;
+
+}
+
+
+.botao_ok:hover {
+    border: 2px solid var(--verde);
+    background-color: var(--branco);
+    color: var(--verde);
+    outline: none !important;
+}
+
+
+/*|||||||||||| MODAL DE AVISO: NOVO USUARIO? | MODAL PRONTO (POR GABRIELA E ESTER) |||||||| */
+
+.modal_novo_usuario,
+.modal-success, .modal_editar {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.modal-content-newUser,
+.modal-content-success {
+    background-color: var(--branco);
+    width: 580px;
+    height: auto;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--verde);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.head-modal-newUser {
+    display: flex ;
+    justify-content: center ;
+}
+
+.title-modal-newUser {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.body-modal-editUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.body-modal-newUser form,
+.body-modal-success form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: var(--font-paragrafo);
+
+}
+
+.form-input {
+    background-color: #F0F0F0;
+    margin-bottom: 12px;
+    display: flex;
+    height: 2.5rem;
+    width: 31rem;
+    padding: 7px 8px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    position: relative;
+    gap: 4px;
+}
+
+::placeholder {
+    font-size: 15px;
+    color: var(--preto);
+    /* opacity: 0.8 ; */
+    /* font-weight: 600; */
+}
+
+.form-input:hover {
+    border: 1px solid #9C4DD9;
+}
+
+
+.input-newUser {
+    font-size: 15px;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    color: var(--preto);
+    font-family: var(--font-paragrafo);
+    display: block;
+}
+
+.dropdown {
+    height: 1.5rem;
+}
+
+.nivelUsuario {
+    width: 28rem;
+    height: 28px;
+    font-family: var(--font-paragrafo);
+    font-size: 15px ;
+    color: var(--preto) ;
+    padding: 0 ;
+    border: none ;
+    background-color: transparent ;
+    text-align: left ;
+    box-shadow: none ;
+    outline: none ;
+    border: none;
+    
+    
+    /* opacity: 0.8; */
+}
+
+
+.nivelUsuario::after {
+    float: right;
+    margin-right: 8px;
+    margin-top: 6px;
+    color: var(--preto);
+}
+.nivelUsuario:focus {
+    border: none;
+    outline: none ;
+
+}
+.dropdown-menu {
+    padding: 0 ;
+    width: 100%;
+    height: 95px;
+    border-radius: 8px ;
+    text-decoration: none;
+}
+
+.dropdown-item {
+    font-size: 14px ;
+    color: var(--preto) ;
+    border: 1px solid transparent ;
+    text-decoration: none ;
+    /* opacity: 0.8 ; */
+    /* all: unset; */
+}
+
+.dropdown-item:hover {
+    background-color: var(--roxo-claro) ;
+    border: 1px solid var(--roxo) ;
+    width: auto;
+}
+.dropdown-menu li{
+    list-style-type: none;
+    /* background-color: aqua(--roxo-claro) ; */
+
+}
+.dropdown-menu a:active {
+    color: var(--preto) ;
+    /* opacity: 0.8 ; */
+}
+
+.dropdown:hover :nth-child(1) {
+    border-top-left-radius: 8px ;
+    border-top-right-radius: 8px ;
+}
+
+.dropdown:hover :nth-child(3) {
+    border-bottom-left-radius: 8px ;
+    border-bottom-right-radius: 8px ;
+}
+
+#aviso {
+    padding: 20px ;
+    font-size: 1rem ;
+    text-align: justify ;
+    font-family: var(--font-paragrafo) ;
+    
+}
+
+.footer-modal-newUser,
+.footer-modal-success {
+    width: 100% ;
+    display: flex ;
+    justify-content: space-around ;
+}
+
+.footer-modal-newUser button,
+.footer-modal-success button {
+    width: 150px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    font-family: var(--font-paragrafo);
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* SUB MODAL USUARIO CRIADO COM SUCESSO */
+.modal_novo_ok {
+    background-color: rgba(0, 0, 0, .6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.novo_aviso_ok {
+    background-color: #FCFCFC;
+    width: 500px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 10px;
+    border: 2px solid var(--verde);
+    align-items: center;
+    justify-content: center;
+
+}
+
+.novo_ok_cabecario {
+    padding: 20px;
+    font-size: 29px ;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+/* campo do botao ok apos a criação de usuario */
+.novo_ok_corpo {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+
+
+#pe_usuario {
+    grid-area: footer;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#pe_usuario #pe {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+#ano-designedBy {
+    text-decoration: none !important;
+    font-size: 12px;
+    color: #9E9E9E;
+}
+
+.fabricaSoftware {
+    font-family: var(--font-paragrafo);
+    text-decoration: none !important;
+    font-size: 12px;
+    color: #9E9E9E;
+}
+
+.fabricaSoftware:hover {
+    color: #0DB451;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 1304px) {
+    #pesq {
+        transition: all .4s ease-in-out;
+        width: 200px;
+    }
+
+    body {
+        overflow: hidden;
+    }
+}
+
+
+
