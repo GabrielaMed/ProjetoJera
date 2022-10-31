@@ -34,7 +34,7 @@
         $mail->SMTPAuth = true;
         $mail->SMTPSecure = 'tls';
         $mail->Username = 'gestao@jera.com.br';
-        $mail->Password = 'mrdfbcyyfsbvqehi';
+        $mail->Password = '';
         $mail->Port = 587;
         
 

@@ -13,7 +13,7 @@
     $sobrenome = mysqli_real_escape_string($con, $_POST['sobrenome']);
     $telefone = mysqli_real_escape_string($con, $_POST['telefone']);
     $email = mysqli_real_escape_string($con, $_POST['email']);
-    $senha = md5('JeraNovo123@');
+    $senha = md5('novasenha');
     $foto = ' ';
     $inativo = 1;
     $fk_id_perfil_usuario = mysqli_real_escape_string($con, $_POST['valueDropdown']);
@@ -71,13 +71,13 @@
                 $mail->Host = 'smtp.gmail.com';
                 $mail->SMTPAuth = true;
                 $mail->SMTPSecure = 'tls';
-                $mail->Username = 'gabriela.medeiros@estudante.ifms.edu.br'; //email remetente
-                $mail->Password = 'mrdfbcyyfsbvqehi'; //senha do email do remetente
+                $mail->Username = ''; //email remetente
+                $mail->Password = ''; //senha do email do remetente
                 $mail->Port = 587;
                 
         
-                $mail->setFrom('gabriela.medeiros@estudante.ifms.edu.br'); //email remetente
-                $mail->addReplyTo('gabriela.medeiros@estudante.ifms.edu.br'); //email remetente
+                $mail->setFrom(''); //email remetente
+                $mail->addReplyTo(''); //email remetente
                 $mail->addAddress($email, $nome_sobrenome);
         
                 $mail->WordWrap = 50; // Definir quebra de linha
