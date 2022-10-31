@@ -1,0 +1,27 @@
+========================== CONFIGURAÇÃO ENVIO DE EMAIL ==========================
+
+Configuração Envio Email Novo Usuário
+
+Siga o Caminho
+
+Jera - arquivos -> bd -> sendEmailNewUser.php
+
+- Na linha 40 entre os apóstrofo Adicione o Email que fara os envios
+
+- Na Linha 41 entre os apóstrofo Adicione A senha do email que fara os envios
+
+- Na linha 45 e 46 entre os apóstrofo Adicione o Email que fara os envios
+
+==================================================================================
+
+Configuração Envio Email Esqueci Minha Senha
+
+Siga o Caminho
+
+Jera - arquivos -> bd -> sendEmailEsqueciSenha.php
+
+- Na linha 36 entre os apóstrofo Adicione o Email que fara os envios
+
+- Na Linha 37 entre os apóstrofo Adicione A senha do email que fara os envios
+
+- Na linha 41 e 42 entre os apóstrofo Adicione o Email que fara os envios

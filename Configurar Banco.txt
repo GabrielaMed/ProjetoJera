@@ -1,0 +1,18 @@
+============================= CONFIGURAÇÃO BANCO DE DADOS =============================
+Configuração Banco de Dados
+
+Siga o Caminho
+
+Jera - arquivos -> bd -> conexao.php
+
+- Na linha 2 entre as aspas Adicione o host onde o Banco de Dados se encontra.
+
+- Na Linha 3 entre as aspas Adicione Nome do Usuario com Acesso ilimitado ao Banco de Dados.
+
+- Na Linha 4 entre as aspas Adicione A senha Banco de Dados.
+
+- Na linha 5 entre as aspas Adicione o Nome do Banco de Dados.
+
+
+OBS:
+O SCRIPT do banco utiliza o código de caracteres “CHARSET=utf8mb3”.
